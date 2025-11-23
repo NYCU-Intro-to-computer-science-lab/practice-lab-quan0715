@@ -1,8 +1,8 @@
 name: Autograding Tests
 on:
-  - push
-  - workflow_dispatch
-  - repository_dispatch
+  push:  # 自動觸發（每次 push）
+  workflow_dispatch:  # 手動觸發
+  repository_dispatch:  # GitHub Classroom 觸發
 
 permissions:
   checks: write
@@ -41,7 +41,7 @@ jobs:
         with:
           test-name: p1-calculator
           setup-command: ''
-          command: python3 scripts/test_single_problem.py p1
+          command: python3 run_tests.py p1 && cat build/p1.score | awk '{print $1"/"$2}'
           timeout: 10
           max-score: 100
 
@@ -52,7 +52,7 @@ jobs:
         with:
           test-name: p2-recursion-sum
           setup-command: ''
-          command: python3 scripts/test_single_problem.py p2
+          command: python3 run_tests.py p2 && cat build/p2.score | awk '{print $1"/"$2}'
           timeout: 10
           max-score: 100
 
@@ -63,7 +63,7 @@ jobs:
         with:
           test-name: p3-climbing-stairs
           setup-command: ''
-          command: python3 scripts/test_single_problem.py p3
+          command: python3 run_tests.py p3 && cat build/p3.score | awk '{print $1"/"$2}'
           timeout: 10
           max-score: 100
 
@@ -74,7 +74,7 @@ jobs:
         with:
           test-name: p4-mccarthy-91
           setup-command: ''
-          command: python3 scripts/test_single_problem.py p4
+          command: python3 run_tests.py p4 && cat build/p4.score | awk '{print $1"/"$2}'
           timeout: 10
           max-score: 100
 

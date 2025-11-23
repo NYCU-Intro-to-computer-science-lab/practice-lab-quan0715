@@ -1,12 +1,7 @@
 name: Autograding
 
 on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-  workflow_dispatch:
+  workflow_dispatch:  # 手動觸發
 
 jobs:
   test:
