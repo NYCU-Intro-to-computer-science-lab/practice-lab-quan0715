@@ -3,46 +3,40 @@ app:
   description: 這是用來測試C++ Lab的模板專案
 problems:
   p1:
-    name: Sum Sum
-    points: 25
+    name: Calculator
+    points: 100
     timeout: 1
+    required:
+    - calculate
   p2:
-    name: Array Operations
-    points: 25
+    name: Recursion Sum
+    points: 100
     timeout: 1
-    cases:
-      '01': 10
-      '02': 10
-      '03': 5
+    forbidden:
+    - for
+    - while
+    - do
+    required:
+    - sum
   p3:
-    name: String Manipulation
-    points: 25
+    name: Climbing Stairs
+    points: 100
     timeout: 1
+    forbidden:
+    - for
+    - while
+    - do
+    required:
+    - climb
   p4:
-    name: Basic I/O
-    points: 25
-    timeout: 1
-  p5:
-    name: Factorial (Recursion)
-    points: 25
+    name: McCarthy 91
+    points: 100
     timeout: 1
     forbidden:
     - for
     - while
     - do
-    - goto
     required:
-    - factorial
-  p6:
-    name: Factorial Challenge
-    points: 25
-    timeout: 1
-    forbidden:
-    - for
-    - while
-    - do
-    - goto
-    required:
-    - factorial
+    - f91
 defaults:
   timeout: 1
