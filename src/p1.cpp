@@ -13,6 +13,9 @@ int calculate(int opcode, int num1, int num2) {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    while(true){
+        cout << "111" ;
+    }
     
     // TODO: 讀取輸入並呼叫 calculate 函數
     // 提示: 使用 while(cin >> opcode >> num1 >> num2) 來讀取到 EOF
